@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+   {#<h1>Hello {{ user.firstname ~ ' ' ~ user.lastname }}</h1>#}
+    <h1>Hello {{ user.fullName }}</h1>
+
+    {# Grâce à la méthode '__tostring' dans la classe User on peut afficher l'objet User #}
+    Nom complet : {{ user }}<br>
+
+    <p>Date de naissance : {{ user.birthdate is empty ? 'inconnue' : user.birthdate|date('d/m/Y') }}</p>
+
+
+{% endblock %}
+
+
+
